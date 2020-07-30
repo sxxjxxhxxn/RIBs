@@ -53,9 +53,5 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         // TODO: Pause any business logic.
     }
     
-    // MARK: - LoggedOutListener
 
-    func didLogin(withPlayer1Name player1Name: String, player2Name: String) {
-        router?.routeToLoggedIn(withPlayer1Name: player1Name, player2Name: player2Name)
-    }
 }

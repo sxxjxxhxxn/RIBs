@@ -73,6 +73,7 @@ final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
     }
 
     private func detachCurrentChild() {
+        print("LoggedInRouter - detachCurrentChild")
         if let currentChild = currentChild {
             detachChild(currentChild)
             viewController.replaceModal(viewController: nil)

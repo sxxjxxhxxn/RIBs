@@ -59,10 +59,12 @@ protocol LoggedInBuildable: Buildable {
 final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
 
     override init(dependency: LoggedInDependency) {
+        print("LoggedInBuilder - init")
         super.init(dependency: dependency)
     }
 
     func build(withListener listener: LoggedInListener, player1Name: String, player2Name: String) -> (router: LoggedInRouting, actionableItem: LoggedInActionableItem) {
+        print("LoggedInBuilder - build")
         let component = LoggedInComponent(dependency: dependency,
                                           player1Name: player1Name,
                                           player2Name: player2Name)

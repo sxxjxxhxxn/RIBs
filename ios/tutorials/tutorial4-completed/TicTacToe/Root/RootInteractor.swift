@@ -56,6 +56,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     // MARK: - LoggedOutListener
 
     func didLogin(withPlayer1Name player1Name: String, player2Name: String) {
+        print("RootInteractor - didLogin")
         let loggedInActionableItem = router?.routeToLoggedIn(withPlayer1Name: player1Name, player2Name: player2Name)
         if let loggedInActionableItem = loggedInActionableItem {
             loggedInActionableItemSubject.onNext(loggedInActionableItem)
@@ -65,6 +66,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     // MARK: - UrlHandler
 
     func handle(_ url: URL) {
+        print("RootInteractor - handle")
         let launchGameWorkflow = LaunchGameWorkflow(url: url)
         launchGameWorkflow
             .subscribe(self)

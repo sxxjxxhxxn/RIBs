@@ -29,6 +29,7 @@ final class LoggedOutRouter: ViewableRouter<LoggedOutInteractable, LoggedOutView
 
     // TODO: Constructor inject child builder protocols to allow building children.
     override init(interactor: LoggedOutInteractable, viewController: LoggedOutViewControllable) {
+        print("LoggedOutRouter - init")
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }

@@ -45,6 +45,7 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     // MARK: - RootViewControllable
 
     func replaceModal(viewController: ViewControllable?) {
+        print("RootViewController - replaceModal")
         targetViewController = viewController
 
         guard !animationInProgress else {
@@ -71,6 +72,7 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     private var animationInProgress = false
 
     private func presentTargetViewController() {
+        print("RootViewController - presentTargetViewController")
         if let targetViewController = targetViewController {
             animationInProgress = true
             present(targetViewController.uiviewController, animated: true) { [weak self] in

@@ -56,6 +56,7 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     // MARK: - LoggedOutPresentableListener
 
     func login(withPlayer1Name player1Name: String?, player2Name: String?) {
+        print("LoggedOutInteractor - login")
         let player1NameWithDefault = playerName(player1Name, withDefaultName: "Player 1")
         let player2NameWithDefault = playerName(player2Name, withDefaultName: "Player 2")
 
